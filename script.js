@@ -4,7 +4,6 @@
       len = items.length,
       current = 1,
       delta,
-      mouseOnItem = false,
       delayFlag = true,
       showItem = 3,
       timer,
@@ -96,7 +95,7 @@
 
   [leftButton, rightButton].forEach(function (aButton) {
     /* Set button  handlers */
-    aButton.addEventListener('click', function () {
+    aButton.addEventListener('click', function (event) {
       var id = event.target.getAttribute('id'); // prev || next
       slide(id, false);
     });
