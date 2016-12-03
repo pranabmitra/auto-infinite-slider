@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="sliderApp">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset=utf-8 />
+    <title>Auto slider</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+  </head>
+  <body ng-controller="SliderController">
+
+    <div class="media-slider-container">
+      <div class="news-wrapper">
+        <div id="sliderWrapper">
+          <ul>
+            <li ng-repeat="item in data track by $index" style="width:{{liWidth}}px;">
+              {{item}}
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <button type="button" id="prev" title="Previous">&laquo;</button>
+      <button type="button" id="next" title="Next">&raquo;</button>
+    </div>
+
+    <p>
+      <span>*</span> Used stack is VanillaJS but inspired by
+      <a href="http://stackoverflow.com/a/15877302/1098851"> this Stackoverflow discussion</a>
+    </p>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
