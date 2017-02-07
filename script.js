@@ -48,7 +48,7 @@
         return;
       }
 
-      if (current === len && delta === 1) {
+      if ((current === len - 1) && delta === 1) {
         sliderWrapper.classList.remove('animation');
         sliderWrapper.style.left = '0px';
       } else if (current === 1 && delta === -1) {
