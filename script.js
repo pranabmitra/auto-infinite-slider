@@ -48,21 +48,22 @@
         return;
       }
 
-      if ((current === len - 1) && delta === 1) {
+
+      if (widthVal <= -(liWidth * (len - 1)) && delta === 1) {
         sliderWrapper.classList.remove('animation');
         sliderWrapper.style.left = '0px';
-      } else if (current === 1 && delta === -1) {
+      } else if (widthVal >= -(liWidth) && delta === -1) {
         sliderWrapper.classList.remove('animation');
         sliderWrapper.style.left = (-liWidth * len) + 'px';
       }
 
-      current += delta;
-      cycle = !!(current === 0 || current > len);
+      // current += delta;
+      // cycle = !!(current === 0 || current > len);
 
-      if (cycle) {
+      // if (cycle) {
         /* switching between original and cloned image */
-        current = (current === 0) ? len : 1;
-      }
+        // current = (current === 0) ? len : 1;
+      // }
 
       delayFlag = true;
       sliderWrapper.removeEventListener(event.type, handler);
